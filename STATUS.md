@@ -14,15 +14,15 @@ refcheck_schema_version: 1
 
 | 狀態 | 數量 |
 |------|------|
-| 待驗證 | 16 |
-| 已確認存在 | 25 |
-| 已確認支持 | 11 |
+| 待驗證 | 10 |
+| 已確認存在 | 31 |
+| 已確認支持 | 13 |
 | 部分支持 | 1 |
-| 不支持（orphan） | 13 |
+| 不支持（orphan） | 17 |
 | 無法存取 | 0 |
 | **總計** | **41** |
 
-refcheck 進度：25 / 41（61%）
+refcheck 進度：31 / 41（76%）
 
 
 ### Ledger（主張查證）
@@ -44,6 +44,7 @@ unverified 0
 | 2026-08-03 | refcheck | Batch 3 | 5 | 5 | 0 | 0 | refcheck/reports/2026-08-03-batch-3.md |
 | 2026-08-03 | refcheck | Batch 4 | 5 | 2 | 0 | 3 | refcheck/reports/2026-08-03-batch-4.md |
 | 2026-08-03 | refcheck | Batch 5 | 5 | 0 | 0 | 5 | refcheck/reports/2026-08-03-batch-5.md |
+| 2026-08-03 | refcheck | Batch 6（high-priority 收尾） | 6 | 2 | 0 | 4 | refcheck/reports/2026-08-03-batch-6.md |
 
 ---
 
