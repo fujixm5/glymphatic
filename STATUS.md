@@ -30,10 +30,10 @@ refcheck 進度：**41 / 41（100%）** ✓
 
 | 狀態 | 數量 |
 |------|------|
-| 總計 | 31 |
-| unverified | 1 |
-| verified | 25 |
-| partial | 5 |
+| 總計 | 45 |
+| unverified | 2 |
+| verified | 34 |
+| partial | 9 |
 | unsupported | 0 |
 | contested | 0 |
 | superseded | 0 |
@@ -58,6 +58,8 @@ refcheck 進度：**41 / 41（100%）** ✓
 | 2026-08-03 | backfill | Batch 2 (§3.1-3.2) | 8 | 6 | 2 | 0 | reports/backfill/2026-08-03-batch-2.md |
 | 2026-08-03 | extraction | Batch 3 (§3.3-3.4, §4.1) | 13 | — | — | — | reports/extraction/2026-08-03-batch-3.md |
 | 2026-08-03 | backfill | Batch 3 (§3.3-3.4, §4.1) | 13 | 11 | 2 | 0 | reports/backfill/2026-08-03-batch-3.md |
+| 2026-08-03 | extraction | Batch 4 (§4.2-4.3 + §5 收尾) | 14 | — | — | — | reports/extraction/2026-08-03-batch-4.md |
+| 2026-08-03 | backfill | Batch 4 (§4.2-4.3 + §5 收尾) | 14 | 10 | 3 | 1 | reports/backfill/2026-08-03-batch-4.md |
 
 ---
 
