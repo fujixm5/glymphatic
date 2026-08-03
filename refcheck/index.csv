@@ -14,8 +14,8 @@ ref_id,citation_text,source_type,source_id,claim_context,priority,exists,accessi
 13,"Driving force of the cranio-spinal CSF oscillation (ResearchGate, 2023)",URL,researchgate.net/figure/...374091994,§1.3 生理搏動的驅動力（顱-脊髓 CSF 振盪）,med,,,,,
 14,Improving Cerebrospinal Fluid Flow in the Brain (The Lift Clinic),URL,theliftclinic.com/csf/,§1.3 引用不明，可能為一般參考,low,,,,,
 15,Meningeal lymphatic vessels (Wikipedia),URL,wikipedia.org/wiki/Meningeal_lymphatic_vessels,§2.1 腦膜淋巴管的基礎描述,low,,,,,
-16,"Glymphatic system: emerging therapeutic approach (Frontiers, 2023)",DOI,DOI:10.3389/fnmol.2023.1138769,§3.4 脊髓廢液經脊神經根匯入全身循環 / §2.1 治療應用,high,,,,,
-17,"CSF outflow along lumbar nerves (PMC, 2014)",PMC,PMC4157386,§3.4 CSF 經腰神經流出 / 神經周圍鞘膜,high,,,,,
+16,"Glymphatic system: emerging therapeutic approach (Frontiers, 2023)",DOI,DOI:10.3389/fnmol.2023.1138769,§3.4 脊髓廢液經脊神經根匯入全身循環 / §2.1 治療應用,high,T,T,F,"DOI:10.3389/fnmol.2023.1138769 = Gao Y et al., Front Mol Neurosci 2023. Review of glymphatic therapeutic approaches. ORPHAN — only listed in works cited (L227), never referenced in body text.",2026-08-03
+17,"CSF outflow along lumbar nerves (PMC, 2014)",PMC,PMC4157386,§3.4 CSF 經腰神經流出 / 神經周圍鞘膜,high,T,T,T,"PMC4157386 = Dec 2014, Croat Med J. ""Cerebrospinal fluid outflow along lumbar nerves and possible relevance for pain research."" Directly supports L122 (lumbar nerve root CSF outflow into peripheral tissue).",2026-08-03
 18,"Anatomy and physiology of CSF (ResearchGate, 2011)",URL,researchgate.net/...51814628...,§3 脊髓 CSF 生理基礎,med,,,,,
 19,CSF Cerebrospinal Fluid (Physiopedia),URL,physio-pedia.com/CSF_Cerebrospinal_Fluid,§3 一般 CSF 參考,low,,,,,
 20,Spinal Cord: Anatomy (Cleveland Clinic),URL,my.clevelandclinic.org/...spinal-cord,§3 脊髓基礎解剖,low,,,,,
@@ -33,9 +33,9 @@ ref_id,citation_text,source_type,source_id,claim_context,priority,exists,accessi
 32,"Diagnosis and treatment of spontaneous intracranial hypotension (Frontiers, 2023)",DOI,DOI:10.3389/fneur.2023.1145949,§3.4 自發性顱內低壓的診斷與治療,med,,,,,
 33,"Glymphatic system in neurological disorders (PMC, 2025)",PMC,PMC11835678,§4 系統失靈與神經系統疾病的關聯（總論）,high,T,T,F,"Corbali O, Levey AI, Front Neurol 2025 (PMC:PMC11835678). Paper exists but is an ORPHAN citation — listed in works cited but never referenced in body text. Same pattern as ref 9.",2026-08-03
 34,"Longitudinal analysis of glymphatic function in ALS and PLS (Brain, 2024)",DOI,DOI:10.1093/brain/awae215,§4.1 ALS 與 PLS 的縱向比較（DTI-ALPS）,high,,,,,
-35,"Glymphatic system: a gateway for neuroinflammation (PMC, 2024)",PMC,PMC11168510,§4.3 神經發炎與膠質淋巴系統的關聯,high,,,,,
-36,"Bidirectional link between sleep disturbances and TBI (PMC, 2022)",PMC,PMC8758801,§4.2 TBI 後睡眠障礙與膠質淋巴功能,high,,,,,
-37,"MS patient with glymphatic failure benefitted from CSF flow shunting (PMC, 2022)",PMC,PMC9663833,§4.3 MS 血管周圍間隙擴張 / AQP4 去極化 / DTI-ALPS 降低,high,,,,,
+35,"Glymphatic system: a gateway for neuroinflammation (PMC, 2024)",DOI,DOI:10.4103/1673-5374.391312,§4.3 神經發炎與膠質淋巴系統的關聯,high,T,T,F,"PMC11168510 is INVALID PMC ID — actual paper is ""Glymphatic system: a gateway for neuroinflammation"" (Neural Regeneration Research, 2024), DOI:10.4103/1673-5374.391312, PMID:38595285, NO PMC ID. **PMC ID was fabricated in original source**. ORPHAN — only listed in works cited (L246), never referenced in body. Updating index.csv to use DOI.",2026-08-03
+36,"Bidirectional link between sleep disturbances and TBI (PMC, 2022)",PMC,PMC8758801,§4.2 TBI 後睡眠障礙與膠質淋巴功能,high,T,T,F,"PMC8758801 = ""The Bidirectional Link Between Sleep Disturbances and Traumatic Brain Injury Symptoms: A Role for Glymphatic Dysfunction?"" (Biol Psychiatry 2022), DOI:10.1016/j.biopsych.2021.06.025, PMID:34481662. ORPHAN — only in works cited (L247), never referenced in body.",2026-08-03
+37,"MS patient with glymphatic failure benefitted from CSF flow shunting (PMC, 2022)",PMC,PMC9663833,§4.3 MS 血管周圍間隙擴張 / AQP4 去極化 / DTI-ALPS 降低,high,T,T,T,"PMC9663833 = ""Case report: A multiple sclerosis patient with imaging features of glymphatic failure benefitted from CSF flow shunting"" (Front Neurosci 2022), DOI:10.3389/fnins.2022.863117, PMID:36389221. Directly supports L155 (MS perivascular inflammation), L157 (AQP4 depolarization in MS), L168 (MS table row).",2026-08-03
 38,"Glymphatic Dysfunction in RRMS and Brain Structural Damage (ResearchGate, 2025)",URL,researchgate.net/...391762525...,§4.3 MS 患者 DTI-ALPS 指數降低與認知功能,med,,,,,
 39,"The glymphatic system for neurosurgeons: a scoping review (PubMed, 2024)",PMID,PMID:38253938,§4 神經外科視角的膠質淋巴系統總論,med,,,,,
 40,"Brain's Waste Removal System Could Improve Delivery of Therapies (ALS News Today, 2025)",URL,alsnewstoday.com/...waste-clearance-system...,§5.1 高滲鹽水增強藥物遞送 / §5.2 繞過血腦屏障的藥物遞送,high,,,,,
