@@ -10,19 +10,20 @@ refcheck_schema_version: 1
 
 ## §1 專案狀態
 
-### Refcheck（引用驗證）
+### Refcheck（引用驗證）— **完成**
 
 | 狀態 | 數量 |
 |------|------|
-| 待驗證 | 10 |
-| 已確認存在 | 31 |
-| 已確認支持 | 13 |
+| 待驗證 | 0 |
+| 已確認存在 | 38 |
+| 存在不確定 | 3 |
+| 已確認支持 | 15 |
 | 部分支持 | 1 |
-| 不支持（orphan） | 17 |
-| 無法存取 | 0 |
+| 不支持（orphan） | 24 |
+| 無法存取 | 2 |
 | **總計** | **41** |
 
-refcheck 進度：31 / 41（76%）
+refcheck 進度：**41 / 41（100%）** ✓
 
 
 ### Ledger（主張查證）
@@ -45,6 +46,7 @@ unverified 0
 | 2026-08-03 | refcheck | Batch 4 | 5 | 2 | 0 | 3 | refcheck/reports/2026-08-03-batch-4.md |
 | 2026-08-03 | refcheck | Batch 5 | 5 | 0 | 0 | 5 | refcheck/reports/2026-08-03-batch-5.md |
 | 2026-08-03 | refcheck | Batch 6（high-priority 收尾） | 6 | 2 | 0 | 4 | refcheck/reports/2026-08-03-batch-6.md |
+| 2026-08-03 | refcheck | Batch 7（收尾 medium/low） | 10 | 2 | 0 | 8 | refcheck/reports/2026-08-03-batch-7-final.md |
 
 ---
 
@@ -60,11 +62,23 @@ unverified 0
 
 ## §4 下一步
 
-### 優先序
+### **Refcheck 完成！** 🎉
 
-1. **Refcheck Batch 3** — ref_id 22, 23, 24, 27, 29（§3 脊髓系統的 high-priority 引用）
-2. **Refcheck Batch 4-7** — 分批跑完剩餘 31 條引用
+### **Refcheck 完成！** 🎉
 
+41 條引用全部跑完。累計：
+- 15 T ✓ / 1 partial ⚠ / 25 F ✗
+- 24 orphans（59% orphan rate）
+- 2 inaccessible / 3 uncertain existence
+
+### 下一步（待辦）
+
+1. **總結報告** — glymphatic 與 glycocalyx 失敗模式對比
+2. **進入 ledger 階段** — 從 source/glymphatic/original.md 抽取高價值 claims
+3. **Backfill** — 對抽取的 claims 進行 PubMed 回填查證
+4. **建立追溯文檔** — 記錄 LLM 在不同任務下的失敗模式
+
+### 注意事項
 ### 注意事項
 - ref_id=2 和 ref_id=3 指向同一文獻（PMC4636982 和 PMID:25947369 是同一篇），應合併判定
 - 檢出 orphan citation 比例高（40%），後續留意這個模式
