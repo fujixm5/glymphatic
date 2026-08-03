@@ -28,11 +28,16 @@ refcheck 進度：**41 / 41（100%）** ✓
 
 ### Ledger（主張查證）
 
-尚未開始。待 refcheck 完成後從 source/glymphatic/original.md 抽取。
+| 狀態 | 數量 |
+|------|------|
+| 總計 | 10 |
+| unverified | 10 |
+| verified | 0 |
+| partial | 0 |
+| unsupported | 0 |
+| contested | 0 |
+| superseded | 0 |
 
-unverified 0
-──────────────
-總計 0
 
 ---
 
@@ -47,6 +52,7 @@ unverified 0
 | 2026-08-03 | refcheck | Batch 5 | 5 | 0 | 0 | 5 | refcheck/reports/2026-08-03-batch-5.md |
 | 2026-08-03 | refcheck | Batch 6（high-priority 收尾） | 6 | 2 | 0 | 4 | refcheck/reports/2026-08-03-batch-6.md |
 | 2026-08-03 | refcheck | Batch 7（收尾 medium/low） | 10 | 2 | 0 | 8 | refcheck/reports/2026-08-03-batch-7-final.md |
+| 2026-08-03 | extraction | Batch 1 (§1.2-1.3) | 10 | — | — | — | reports/extraction/2026-08-03-batch-1.md |
 
 ---
 

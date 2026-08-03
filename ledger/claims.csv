@@ -1,1 +1,11 @@
 claim_id,section,claim,claim_type,status,tier,source_ref,pmid_doi,evidence,note,priority,last_checked
+1.2-aqp4-ko-csf-influx-60pct,1.2,在小鼠模型中透過基因技術剔除 Aqp4 基因，會導致腦脊髓液的流入量顯著減少高達 60%。,measurement,unverified,,source/glymphatic/original.md#L27,,,原文用 ref 1 標記。60% 是關鍵數值。原研究 Iliff JJ 2012 / 後續 AQP4 KO 研究需查證。,high,
+1.2-aqp4-ko-solute-clearance,1.2,Aqp4 基因剔除會嚴重損害 Aβ 等溶質的清除效率。,mechanism,unverified,,source/glymphatic/original.md#L27,,,原文用 ref 1 標記。機制性主張，需查證 AQP4 KO 對 Aβ 清除影響的原始實驗。,high,
+1.2-aqp4-polarization-endfeet,1.2,AQP4 並非均勻分佈在星狀膠細胞表面，而是高度集中或極化於緊貼血管的星狀膠細胞終足上。,fact,unverified,,source/glymphatic/original.md#L26,,,原文用 ref 1 標記（Jessen 2015 Beginner Guide review）。需查證原始文獻。,high,
+1.3-arterial-pulsation-driver,1.3,腦膠質淋巴流動的主要驅動力被認為是源自心臟週期的腦動脈持續搏動。,mechanism,unverified,,source/glymphatic/original.md#L36,,,原文用 ref 1 標記。機制性主張，Iliff 2012 原文有相關內容。,med,
+1.3-norepinephrine-suppression,1.3,清醒時由藍斑核釋放的高水平正腎上腺素會使腦細胞維持較大體積，從而壓縮組織間隙，抑制膠質淋巴功能。,mechanism,unverified,,source/glymphatic/original.md#L35,,,原文用 ref 1 標記。神經調節機制主張。需查證 locus coeruleus / norepinephrine / ISF 體積關係。,high,
+1.3-nrem-slow-wave-most-active,1.3,膠質淋巴系統在深度 NREM 慢波睡眠中活性最高，而在清醒時則大部分處於受抑制的狀態。,fact,unverified,,source/glymphatic/original.md#L35,,,原文用 ref 1 標記。需查證 sleep-glymphatic 原始文獻（Xie 2013 Science）。,high,
+1.3-respiration-csf-driver-spinal,1.3,呼吸作用產生的胸腔內壓力變化會引起腦脊髓液的整體壓力梯度波動，尤其在脊髓腔內，呼吸是驅動腦脊髓液流動的一個重要力量。,mechanism,unverified,,source/glymphatic/original.md#L36,,,"原文用 ref 7 標記（Wang DJ 2023 BJR review, PMC10607419）。refcheck batch 1 判 supports_claim=T。",high,
+1.3-sleep-interstitial-volume-60pct,1.3,在睡眠期間，大腦的組織間隙體積會擴大約 60%。,measurement,unverified,,source/glymphatic/original.md#L35,,,原文用 ref 1 標記。60% 是關鍵數值，與 1.2 的 60% 不同（這是 ISF 體積）。Xie 2013 應有對應數據。,high,
+1.3-vasomotion-driver,1.3,血管直徑的低頻自發性振盪（血管舒縮 vasomotion）對驅動腦膠質淋巴液流動有所貢獻。,mechanism,unverified,,source/glymphatic/original.md#L36,,,"原文用 ref 1 標記。原文有 typo (""貢PPM獻"")，推測 LLM 在生成時的編碼錯誤。機制性主張。",med,
+1.3-wake-csf-influx-reduction-95pct,1.3,與睡眠或麻醉狀態相比，清醒小鼠腦中腦脊髓液的流入量減少了高達 95%。,measurement,unverified,,source/glymphatic/original.md#L35,,,原文用 ref 1 標記。95% 是關鍵數值。應來自 Xie 2013 或同類研究。,high,
