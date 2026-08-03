@@ -46,12 +46,13 @@
 
 人體閘門規則：epidemiology / therapeutic 主張在 in_vitro / animal-only 證據下不得 verified（同 glycocalyx v9 鐵律）。
 
-## §4 欄位不可違反規則（同 glycocalyx）
+## §4 欄位不可違反規則
 
 1. 第一筆 PMID/DOI 對應到按引用順序的第一個 source_ref
 2. 歸屬不同即為不同條：相同數值出現在不同章節/不同歸屬 → 各自建列
 3. 數值必須逐字相符，不得換算、四捨五入或推估
 4. 帳本不得刪除任何列。判定改變時新增列並標記取代關係
+5. **變更必須記錄**：任何 schema 變更必須遞增 `schema_version`，並在 `ledger/CHANGELOG.md` 記錄變更內容與日期
 
 ## §5 glymphatic 特有規則
 
@@ -63,7 +64,39 @@
 
 5.4 「共識」宣稱處理方式（同 glycocalyx v9）：凡宣稱「國際共識」而未指名具體學會或立場聲明 → claim 改寫為可指名的形式（例如「存在指引建議 X」，而非「國際共識認為 X」），查不到出處則 unsupported
 
-## §6 已知問題與預防
+## §6 與 glycocalyx v9 的相容性邊界
+
+**明確聲明**：glymphatic v1 與 glycocalyx v9 是**獨立 schema**，**欄位不相容**但**精神相容**。
+
+### 精神相容（保留的設計原則）
+
+- ✅ Append-only：帳本不得刪除任何列
+- ✅ PMID/DOI 只能來自本次檢索回傳
+- ✅ source/ 唯讀
+- ✅ claim_id 永生（永不重用、永不改名）
+- ✅ 數值逐字相符，不得換算或推估
+- ✅ unsupported 與 partial 是合格結果
+- ✅ 一條主張，一列（不為文件而複製列）
+
+### 欄位不相容（重造的設計決定）
+
+| 差異 | glycocalyx v9 | glymphatic v1 |
+|------|---------------|---------------|
+| 主欄名 | `statement` | `claim` |
+| claim_type | definition / fact / mechanism / measurement / epidemiology / therapeutic | fact / mechanism / measurement / causal / comparison / clinical |
+| tier 體系 | in_vitro / animal / human_obs / rct / meta / review（證據標籤） | S / A / B / C / D / U（證據階梯 + 人體閘門） |
+| pmid_doi | 併入 evidence | 獨立欄 |
+| source_ref 格式 | `{doc}#{section}` | `{path}::{anchor}` |
+
+### 結論
+
+兩個專案的 ledger/claims.csv **不得直接合併**。
+
+完整的差異記錄與設計理由見 `ledger/CHANGELOG.md`。
+
+---
+
+## §7 已知問題與預防
 
 - DTI-ALPS index 是 glymphatic 領域最常用的影像指標，但其敏感度和特異度仍在驗證中。凡 claim 以 DTI-ALPS 為唯一證據 → tier 上限為 B（非直接量測），除非有病理或生化證據佐證
 - 睡眠-清醒的 CSF 流入差異（95%、60%）來自 rodent 研究 → tier C。不得因文獻被大量引用而升等為 tier A

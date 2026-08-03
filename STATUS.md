@@ -111,9 +111,16 @@ refcheck 進度：**41 / 41（100%）** ✓
 
 ## §6 與 glycocalyx 的對照
 
-| | glycocalyx | glymphatic |
+| | glycocalyx (v9) | glymphatic (v1) |
 |---|---|---|
-| 帳本規模 | 314 條（13% high 已判定） | 0 條 |
-| refcheck 進度 | 無（原始文件無系統引用） | 5/41（12%） |
-| 當前階段 | 抽取 heparanase §5B+ | refcheck Batch 2 |
-| 結構性發現 | 數值漂移、歸屬錯接、偽共識 | 引用錯位、orphan citations |
+| schema 版本 | v9 | v1 |
+| 帳本規模 | 314 條 | 45 條 |
+| verified 比例 | ~5%（5/314，階段早期） | **76% (34/45)** |
+| refcheck 階段 | 無（原始文件無系統引用） | 41/41 ✓ |
+| schema 精神相容 | — | ✅（append-only、PMID 不可偽造、source 唯讀） |
+| schema 欄位相容 | — | ❌（欄位重造，見 `ledger/CHANGELOG.md`） |
+| 結構性發現 | 數值漂移、歸屬錯接、偽共識（數值型任務失敗模式） | 引用錯位、orphan 59%、2 個 ID 偽造（敘述型任務失敗模式） |
+
+**注意**：兩邊的 `unverified` 數字差異（278 vs 2）是**階段差異**，不是品質差異。glycocalyx 處於抽取階段早期，glymphatic 已完成抽取進入 backfill 階段。
+
+跨專案引用請見 `glycocalyx/STATUS.md` 的對應章節（兩個 repo 互相引用避免誤讀完成度）。
