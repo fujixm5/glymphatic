@@ -14,15 +14,16 @@ refcheck_schema_version: 1
 
 | 狀態 | 數量 |
 |------|------|
-| 待驗證 | 36 |
-| 已確認存在 | 5 |
-| 已確認支持 | 2 |
+| 待驗證 | 31 |
+| 已確認存在 | 10 |
+| 已確認支持 | 4 |
 | 部分支持 | 1 |
-| 不支持（orphan） | 2 |
+| 不支持（orphan） | 5 |
 | 無法存取 | 0 |
 | **總計** | **41** |
 
-refcheck 進度：5 / 41（12%）
+refcheck 進度：10 / 41（24%）
+
 
 ### Ledger（主張查證）
 
@@ -39,6 +40,7 @@ unverified 0
 | 日期 | 階段 | 批次 | 條數 | 通過 | 部分 | 不支持 | 報告 |
 |------|------|------|------|------|------|--------|------|
 | 2026-08-03 | refcheck | Batch 1（校準） | 5 | 2 | 1 | 2 | refcheck/reports/2026-08-03-batch-1.md |
+| 2026-08-03 | refcheck | Batch 2 | 5 | 2 | 0 | 3 | refcheck/reports/2026-08-03-batch-2.md |
 
 ---
 
@@ -56,9 +58,8 @@ unverified 0
 
 ### 優先序
 
-1. **Refcheck Batch 2** — ref_id 2, 4, 5, 8, 10（§1.1 和 §1.2 的其餘 high-priority 引用）
-2. **Refcheck Batch 3** — ref_id 22, 23, 24, 27, 29（§3 脊髓系統的 high-priority 引用）
-3. **Refcheck Batch 4-8** — 分批跑完剩餘引用
+1. **Refcheck Batch 3** — ref_id 22, 23, 24, 27, 29（§3 脊髓系統的 high-priority 引用）
+2. **Refcheck Batch 4-7** — 分批跑完剩餘 31 條引用
 
 ### 注意事項
 - ref_id=2 和 ref_id=3 指向同一文獻（PMC4636982 和 PMID:25947369 是同一篇），應合併判定
