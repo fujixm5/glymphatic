@@ -1,0 +1,3 @@
+# 帳本佔位符 — claims.csv
+
+claim_id,section,claim,claim_type,status,tier,source_ref,pmid_doi,evidence,note,priority,last_checked
