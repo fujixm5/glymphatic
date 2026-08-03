@@ -124,3 +124,63 @@ refcheck 進度：**41 / 41（100%）** ✓
 **注意**：兩邊的 `unverified` 數字差異（278 vs 2）是**階段差異**，不是品質差異。glycocalyx 處於抽取階段早期，glymphatic 已完成抽取進入 backfill 階段。
 
 跨專案引用請見 `glycocalyx/STATUS.md` 的對應章節（兩個 repo 互相引用避免誤讀完成度）。
+
+---
+
+## §7 待決 — 合併 vs 保持獨立（2026-08-03 23:27 JST，下次工作起點）
+
+### 問題
+
+今晚 23:00 的決定明確記錄在 `ledger/CHANGELOG.md`：「glymphatic v1 與 glycocalyx v9 是**獨立 schema**，精神相容但欄位不相容」。§6 對照表也強調這點。
+
+23:21 狼提出**反方向**的問題：「如果把 2 個 repos 合併成 1 個全新的 repo，可以嗎？」並追問「把 glymphatic v1 的 45 條 claims 轉過去，欄位統一，有困難嗎？」
+
+### 兩個方向的根本矛盾
+
+**保持獨立**（23:00 決定）：
+- 兩個 repo 並存，各自 schema
+- CHANGELOG.md 記錄設計邊界
+- 已 push 完整：refcheck 41/41 + ledger 45 claims
+
+**強制合併**（23:21 提出的方向）：
+- 統一 schema（採 glycocalyx v9）
+- 45 條 glymphatic claims 需轉換（claim_type, tier, pmid_doi）
+- CHANGELOG.md 變成歷史遺物
+
+### 合併的具體困難點（2026-08-03 23:27 已分析）
+
+1. **claim_type 映射需逐條判定**：3 條 `causal` + 3 條 `clinical` 需判斷是 `mechanism` / `epidemiology` / `therapeutic` — 不能 script 處理
+2. **tier 體系語意不同**：glymphatic S/A/B/C/D/U 是證據階梯（帶人體閘門），glycocalyx in_vitro/animal/... 是文獻來源類型 — 需要逐條看 PMID/DOI 判斷研究類型
+3. **DTI-ALPS 上限 B 規則會丟失**：glymphatic v1 §5.3 領域特定規則，glycocalyx 沒有 — 要寫 addendum 或放棄
+4. **§1.5 互相引用的設計會過時**：兩邊 STATUS.md 互相引用「跨專案引用」設計需重寫
+5. **§6 對照表會過時**：原設計是「兩個獨立 schema」，合併後該對照失去意義
+
+### 時間估計
+
+完整合併 ~2.5 小時（轉換器 30 min + 逐條判定 30 min + TOPICS.md 整合 20 min + SCHEMA 合併 30 min + claims.csv 合併 20 min + 測試 push 20 min）
+
+### 待決定
+
+- [ ] 是否合併？（保留雙 repo 還是合併成新 repo）
+- [ ] 合併時採 glycocalyx v9 還是 glymphatic v1 為基準？
+- [ ] DTI-ALPS 等領域特定規則的歸宿
+- [ ] 新 repo 名稱（如決定合併）
+- [ ] 兩個 repo 的 git 歷史保留方式（subtree add vs zip 拷貝）
+
+### 下次工作起點建議
+
+如果決定合併：
+1. 確認基準 schema（v9 glycocalyx）
+2. 寫 claim_type 轉換規則（先規則，後寫腳本）
+3. 寫 tier 轉換規則（需要逐條查 PMID 對應研究類型）
+4. 處理 source_ref 與 TOPICS.md 格式
+5. 處理 pmid_doi 併入 evidence
+6. 兩邊 STATUS.md 重寫為「合併後統一」結構
+7. CHANGELOG.md 改為「合併紀錄」而非「設計邊界」
+
+如果決定不合併：
+- 保持現狀
+- 後續工作回到各自專案的 backlog
+
+**此節是下次工作開始時第一個要處理的開放問題。**
+
